@@ -12,8 +12,19 @@ cd "${CURRENT_PATH}" ;
 REPO_NAME=$(eval 'basename -s .git $GITHUB_REPO_URL') ;
 PATH_REPO_TEST="${CURRENT_PATH}/repo-test" ;
 
+
+{
+  mkdir -p "${CURRENT_PATH}/repo-test"
+} || {
+  continue
+}
 sudo chown -R $USER:users "${CURRENT_PATH}/repo-test" ;
-rm -rf "${PATH_REPO_TEST}/${REPO_NAME}" ;
+{
+  rm -rf "${PATH_REPO_TEST}/${REPO_NAME}" ;
+} || {
+  continue
+}
+
 
 sudo chown -R $USER:users $PATH_REPO_TEST ;
 
@@ -58,8 +69,7 @@ cd "${PATH_TO_ANGULAR_REPO}" && docker build -t my-angular-app -f "${PATH_TO_ANG
 #cd "${PATH_REPO_TEST}/${REPO_NAME}" && docker-compose -f "${PATH_REPO_TEST}/${REPO_NAME}/nodejs.compose.yaml"  up ;
 
 
-### DON'T RUN !!!! ###
-#rm -rf "${PATH_REPO_TEST}/${REPO_NAME}" ;
+
 
 
 
