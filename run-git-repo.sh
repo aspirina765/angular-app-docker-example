@@ -69,7 +69,8 @@ cd "${PATH_TO_ANGULAR_REPO}" && docker build -t my-angular-app -f "${PATH_TO_ANG
 #cd "${PATH_REPO_TEST}/${REPO_NAME}" && docker-compose -f "${PATH_REPO_TEST}/${REPO_NAME}/nodejs.compose.yaml"  up ;
 
 
-
+### DONT RUN !!!!!
+#rm -rf "${PATH_REPO_TEST}/${REPO_NAME}" ;
 
 
 
