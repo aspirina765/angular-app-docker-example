@@ -15,8 +15,6 @@ PATH_REPO_TEST="${CURRENT_PATH}/repo-test" ;
 sudo chown -R $USER:users "${CURRENT_PATH}/repo-test" ;
 rm -rf "${PATH_REPO_TEST}/${REPO_NAME}" ;
 
-# git checkout $tag -b latest
-
 sudo chown -R $USER:users $PATH_REPO_TEST ;
 
 FILE="${PATH_REPO_TEST}/${REPO_NAME}" ;
